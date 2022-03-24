@@ -14,3 +14,10 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+export const api = {
+  baseUrl:"http://localhost:3000/",
+  routes:{
+    getUsers:{endpoints:"api/getUsers" , method:"GET"}
+  }
+}
