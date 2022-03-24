@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="p-2 m-2">
+      <h1>Add New User Details:-</h1>
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+          <label for="mobile" class="form-label">Mobile</label>
+          <input type="number" class="form-control" id="mobile">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="card col-12 col-lg-3 col-md-4 col-sm-6 p-2 m-2" *ngFor="let user of userList">
+        <h5 class="card-header">{{user.name}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Mobile Number</h5>
+          <p class="card-text">{{user.mobile}}</p>
+          <a href="#" class="btn btn-primary me-3">Edit</a>
+          <a href="#" class="btn btn-primary">Delete</a>
+        </div>
+      </div>
+    </div>
+   
+  </div>
