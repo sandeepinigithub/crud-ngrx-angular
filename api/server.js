@@ -45,6 +45,12 @@ app.put('/api/updateUser', (req, res) => {
     })
     res.json("User updated successfully!");
 });
+app.delete('/api/deleteUser/:id', (req, res) => {
+    console.log('deleting task:::', req.params.id);
+    const id = req.params.id;
+    users = users.filter(usr => usr.id !== id)
+    res.json("User deleted successfully!");
+});
 
 app.listen(port, () => {
     console.log(`Server listening on the port ${port}`);

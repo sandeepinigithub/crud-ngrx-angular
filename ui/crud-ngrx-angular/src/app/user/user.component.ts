@@ -66,5 +66,16 @@ export class UserComponent implements OnInit {
     this.userForm.mobile = user.mobile;
     this.updateId = user.id;    
   }
+  deleteUser(id:string){
+    this._userService.deleteUser(id).subscribe((res)=>{
+      try {
+        // console.log(res);
+        this.getUsers()  
+      } catch (err) {
+        console.log("Error:-", err);
+
+      }  
+    })
+  }
 
 }

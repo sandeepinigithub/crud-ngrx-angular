@@ -21,4 +21,7 @@ export class UserService {
   updateUser(payload:UserDetails):Observable<UserDetails[]>{
     return this._http.put<UserDetails[]>(`${api.baseUrl+api.routes.updateUser.endpoints}`,payload);
   }
+  deleteUser(id:string):Observable<UserDetails[]>{
+    return this._http.delete<UserDetails[]>(`${api.baseUrl+api.routes.deleteUser.endpoints+id}`);
+  }
 }
