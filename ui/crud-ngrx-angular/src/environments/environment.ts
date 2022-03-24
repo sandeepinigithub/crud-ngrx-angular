@@ -18,6 +18,8 @@ export const environment = {
 export const api = {
   baseUrl:"http://localhost:3000/",
   routes:{
-    getUsers:{endpoints:"api/getUsers" , method:"GET"}
+    getUsers:{endpoints:"api/getUsers" , method:"GET"},
+    addUser:{endpoints:"api/addUser" , method:"POST"},
+    updateUser:{endpoints:"api/updateUser" , method:"POST"}
   }
 }
