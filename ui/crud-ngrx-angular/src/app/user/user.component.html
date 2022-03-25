@@ -1,6 +1,6 @@
 <div class="container">
     <div class="p-2 m-2">
-      <h1>Add New User Details:-</h1>
+      <h1>{{updateId ? "Edit user details" : "Add a user"}}</h1>
       <form #f="ngForm" (ngSubmit)="addUser(f)">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -10,7 +10,7 @@
           <label for="mobile" class="form-label">Mobile</label>
           <input type="number" class="form-control" id="mobile" name="mobile" [(ngModel)]="userForm.mobile">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">{{updateId ? "Update" : "Add"}}</button>
       </form>
     </div>
   </div>
